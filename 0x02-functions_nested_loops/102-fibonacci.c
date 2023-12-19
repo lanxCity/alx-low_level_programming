@@ -18,12 +18,12 @@ int main(void)
 	/*Number of existing sequence; n1 and n2*/
 	nth = 2;
 
-	while (nth <= 50)
+	while (nth < 50)
 	{
 		n3 = n1 + n2;
 		printf("%ld", n3);
 
-		if (nth != 50)
+		if (nth != 49)
 			printf(", ");
 
 		n1 = n2;
