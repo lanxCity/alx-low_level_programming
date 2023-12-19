@@ -8,27 +8,24 @@
 
 int main(void)
 {
-	long int n1, n2, n3;
+	long int n1, n2, n3, even_sum;
 
-	n1 = 2;
-	n2 = 4;
+	n1 = 1;
+	n2 = 2;
 
-	printf("%ld, %ld, ", n1, n2);
-
+	even_sum = 2;
 	n3 = n1 + n2;
 
 	while (n3 < 4000000)
 	{
-		printf("%ld", n3);
+		if (n3 % 2 == 0)
+			even_sum += n3;
 
 		n1 = n2;
 		n2 = n3;
 
 		n3 = n1 + n2;
-
-		if (n3 < 4000000)
-			printf(", ");
 	}
-	printf("\n");
+	printf("%ld\n", even_sum);
 	return (0);
 }
