@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - Checking if an element is lowercase
+ * _isalpha - Checking if an element is lowercase
  *
  * @c: param
  *
