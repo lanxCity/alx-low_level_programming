@@ -23,7 +23,7 @@ int main(void)
 		n3 = n1 + n2;
 		printf("%lu", n3);
 
-		if (nth != 97)
+		if (nth < 97)
 			printf(", ");
 
 		n1 = n2;
