@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	unsigned long long int n1, n2, n3, nth;
+	unsigned long int n1, n2, n3, nth;
 
 	n1 = 1;
 	n2 = 2;
 
-	printf("%llu, %llu, ", n1, n2);
+	printf("%lu, %lu, ", n1, n2);
 
 	/*Number of existing sequence; n1 and n2*/
 	nth = 2;
@@ -21,7 +21,7 @@ int main(void)
 	while (nth < 98)
 	{
 		n3 = n1 + n2;
-		printf("%llu", n3);
+		printf("%lu", n3);
 
 		if (nth != 97)
 			printf(", ");
