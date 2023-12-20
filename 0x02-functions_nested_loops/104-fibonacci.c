@@ -16,7 +16,7 @@ int main(void)
 	printf("%lu, %lu, ", n1, n2);
 
 	/*Number of existing sequence; n1 and n2*/
-	nth = 12;
+	nth = 2;
 
 	while (nth < 98)
 	{
