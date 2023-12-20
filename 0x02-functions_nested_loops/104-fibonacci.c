@@ -16,14 +16,14 @@ int main(void)
 	printf("%lu, %lu, ", n1, n2);
 
 	/*Number of existing sequence; n1 and n2*/
-	nth = 2;
+	nth = 15;
 
-	while (nth <= 98)
+	while (nth < 98)
 	{
 		n3 = n1 + n2;
 		printf("%lu", n3);
 
-		if (nth < 98)
+		if (nth < 97)
 			printf(", ");
 
 		n1 = n2;
