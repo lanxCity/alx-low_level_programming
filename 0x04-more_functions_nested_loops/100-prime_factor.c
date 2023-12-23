@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+
 /**
  * main - check the code
  *
@@ -7,46 +7,58 @@
  */
 int main(void)
 {
-	long long int num, i, j, ans, isPrime;
+	long int value, new_val, mult, factor;
+	int i;
 
-	num = 612852475143;
-	i = 2;
-	isPrime = 1;
-	/* initialising answer as the original value*/
-	ans = num;
-	while (ans != 1)
+	value = 612852475143;
+	factor = 2;
+
+	mult = 1;
+
+	new_val = value;
+	/**/
+	while (mult < value)
 	{
-		if (isPrime && ans % i == 0)
+		if (new_val % factor == 0)
 		{
-			ans /= i;
-			/*printf("%lld", i);*/
+			for (i = 2; i <= factor; i++)
+			{
+				if ((factor % i == 0) && i < factor)
+					break;
+				if (i == factor)
+				{
+					new_val = new_val / factor;
+					mult = mult * factor;
 
-			/*if (ans != 1)*/
-			/*	printf(", ");*/
-			/*else*/
-				/*printf("\n");*/
-			if (ans == 1)
-				printf("%lld\n", i);
+					/*printf("%ld ", factor);*/
+				}
+
+			}
 		}
 		else
 		{
-			i++;
-			/*Checking if the value of i is a prime number*/
-			for (j = 2; j < i; j++)
-			{
-				if ((i % j != 0))
-				{
-					if (j != i - 1)
-						continue;
-					isPrime = 1;
-				}
-				else
-				{
-					isPrime = 0;
-					break;
-				}
-			}
+			factor++;
 		}
 	}
+	printf("%ld", factor);
+	printf("\n");
 	return (0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
