@@ -5,16 +5,12 @@
  * @str: param
  * Return: void
  */
-int main()
+void _puts(char *str)
 {
 	int i;
-	char *str, letter;
+	char letter;
 	/**/
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
 	i = 0;
-
-	printf("%c", *str);
-
 	while (letter != '\0')
 	{
 		letter = *(str + i);
@@ -22,6 +18,4 @@ int main()
 		i++;
 	}
 	printf("\n");
-
-	return (0);
 }
