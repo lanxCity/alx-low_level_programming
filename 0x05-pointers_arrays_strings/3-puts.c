@@ -8,17 +8,10 @@
 void _puts(char *str)
 {
 	int i;
-	char letter;
 	/**/
-	i = 0;
-	while (letter != '\0')
+	for (i = 0; *(str + i); i++)
 	{
-		if (letter)
-		{
-			letter = *(str + i);
-			printf("%c", letter);
-		}
-		i++;
+		_putchar(*(str + i));
 	}
-	printf("\n");
+	/*printf("\n---------------%d\n", i);*/
 }
