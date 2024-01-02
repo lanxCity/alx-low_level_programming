@@ -13,8 +13,11 @@ void _puts(char *str)
 	i = 0;
 	while (letter != '\0')
 	{
-		letter = *(str + i);
-		printf("%c", letter);
+		if (letter)
+		{
+			letter = *(str + i);
+			printf("%c", letter);
+		}
 		i++;
 	}
 	printf("\n");
