@@ -15,6 +15,7 @@ int counter(char *str);
 
 char *str_concat(char *s1, char *s2)
 {
+	char *new;
 	int size1, size2, i, j;
 
 	if (s1 == NULL)
@@ -26,8 +27,7 @@ char *str_concat(char *s1, char *s2)
 	size1 = counter(s1);
 	size2 = counter(s2);
 
-	char *new = (char *)malloc(sizeof(char) * (size1 + size2 + 1));
-	
+	new = (char *)malloc(sizeof(char) * (size1 + size2 + 1));
 	/**/
 	if (new == NULL)
 		return (NULL);
