@@ -29,9 +29,10 @@ char *str_concat(char *s1, char *s2)
 
 	new = (char *)malloc(sizeof(char) * (size1 + size2 + 1));
 	/**/
+
+	i = 0;
 	if (size1 != 0)
 	{
-		i = 0;
 		while (s1[i] != '\0')
 		{
 			new[i] = s1[i];
@@ -39,9 +40,9 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 
+	j = 0;
 	if (size2 != 0)
 	{
-		j = 0;
 		while (s2[j] != '\0')
 		{
 			new[i] = s2[j];
@@ -67,6 +68,8 @@ int counter(char *str)
 
 	while (str[size] != '\0')
 		size++;
+
+	/*printf("%d\n", size);*/
 
 	return (size);
 }
