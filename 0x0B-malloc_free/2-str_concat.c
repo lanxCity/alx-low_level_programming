@@ -16,7 +16,7 @@ int counter(char *str);
 char *str_concat(char *s1, char *s2)
 {
 	char *new;
-	int size, i, j;
+	int size1, size2, i, j;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -24,28 +24,31 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	/**/
-	size = counter(s1);
-	new = (char *)malloc(sizeof(char) * (size + 1));
-	/**/
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		new[i] = s1[i];
-		i++;
-	}
-	/**/
-	size = counter(s2);
-	new = realloc(new, sizeof(char) * size);
-	/**/
-	j = 0;
-	while (s2[j] != '\0')
-	{
-		new[i] = s2[j];
+	size1= counter(s1);
+	size2 = counter(s2);
 
-		i++;
-		j++;
+	new = (char *)malloc(sizeof(char) * (size1 + size2 + 1));
+	/**/
+	if (size1 != 0)
+	{
+		i = 0;
+		while (s1[i] != '\0')
+		{
+			new[i] = s1[i];
+			i++;
+		}
 	}
 
+	if (size2 != 0)
+	{
+		j = 0;
+		while (s2[j] != '\0')
+		{
+			new[i] = s2[j];
+			i++;
+			j++;
+		}
+	}
 	if (new == NULL)
 		return (NULL);
 	return (new);
