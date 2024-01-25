@@ -2,10 +2,11 @@
 #include <stdio.h>
 
 /**
- * int_iterator - function
+ * int_index - function
  * @array: param1
  * @size: param2
- * @cpm: param3
+ * @cmp: param3
+ * Return: integer
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
