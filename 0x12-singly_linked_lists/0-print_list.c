@@ -14,7 +14,10 @@
 
 	for (n = 0; nxt_add != NULL; n++)
 	{
-		printf("[%d] %s\n", nxt_add->len, nxt_add->str);
+		if (nxt_add->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%d] %s\n", nxt_add->len, nxt_add->str);
 		nxt_add = nxt_add->next;
 	}
 
