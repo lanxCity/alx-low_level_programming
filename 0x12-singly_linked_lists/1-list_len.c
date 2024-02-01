@@ -5,7 +5,7 @@
  * @h: A pointer
  * Return: Returns the number of nodes
  */
- size_t print_list(const list_t *h)
+ size_t list_len(const list_t *h)
 {
 	size_t n;
 	list_t *nxt_add;
@@ -14,7 +14,6 @@
 
 	for (n = 0; nxt_add != NULL; n++)
 	{
-		printf("[%d] %s\n", nxt_add->len, nxt_add->str);
 		nxt_add = nxt_add->next;
 	}
 
