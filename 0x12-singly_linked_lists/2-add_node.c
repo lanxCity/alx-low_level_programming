@@ -15,14 +15,14 @@ list_t *add_node(list_t **head, const char *str)
 	/**/
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
-		return NULL;
-	
+		return (NULL);
+	/**/
 	new_node->str = strdup(str);
-	
+	/**/
 	if (new_node->str == NULL)
 	{
 		free(new_node);
-		return NULL;
+		return (NULL);
 	}
 	/**/
 	for (i = 0; str[i] != '\0'; i++)
@@ -30,7 +30,7 @@ list_t *add_node(list_t **head, const char *str)
 	/**/
 	new_node->len = i;
 	new_node->next = *head;
-	
+	/**/
 	*head = new_node;
-	return new_node;
+	return (new_node);
 }
