@@ -3,14 +3,14 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * add_node - A function
+ * add_node_end - A function
  * @head: param1
  * @str: param2
  * Return: Address of a node
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node;
+	list_t *new_node, *current;
 	size_t i;
 	/**/
 	new_node = malloc(sizeof(list_t));
@@ -30,15 +30,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	/**/
 	new_node->len = i;
 	new_node->next = NULL;
-	
+	/**/
 	if (*head == NULL)
 	{
 		*head = new_node;
 	}
 	else
 	{
-		list_t *current = *head;
-		
+		current = *head;
 		while (current->next != NULL)
 		{
 			current = current->next;
