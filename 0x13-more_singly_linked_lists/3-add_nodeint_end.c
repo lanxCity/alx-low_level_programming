@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * add_node_end - A function
+ * add_nodeint_end - A function
  * @head: param1
- * @str: param2
+ * @n: param2
  * Return: Address of a node
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
