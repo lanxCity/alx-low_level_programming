@@ -1,8 +1,9 @@
 #include "lists.h"
 
 /**
- * pop_listint2 - A function
+ * pop_listint - A function
  * @head: param1
+ * Return: int
  */
 int pop_listint(listint_t **head)
 {
@@ -16,7 +17,7 @@ int pop_listint(listint_t **head)
 
 	new_head = (*head)->next;
 	pop_data = (*head)->n;
-	
+	/**/
 	free(*head);
 
 	*head = new_head;
