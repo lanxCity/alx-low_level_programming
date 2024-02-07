@@ -3,10 +3,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * get_nodeint_at_index - A function
+ * sum_listint - A function
  * @head: param1
- * @index: param2
- * Return: Address of a node
+ * Return: int
  */
 int sum_listint(listint_t *head)
 {
