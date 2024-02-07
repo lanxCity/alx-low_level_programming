@@ -16,7 +16,7 @@ int sum_listint(listint_t *head)
 		return (0);
 	/**/
 	new_node = head;
-	for (sum = 0; new_node->next != NULL; sum += new_node->n)
+	for (sum = head->n; new_node->next != NULL; sum += new_node->n)
 	{
 
 		new_node = new_node->next;
