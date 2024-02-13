@@ -1,19 +1,20 @@
+#include "main.h"
 #include <stdio.h>
+
 
 
 int main()
 {
-	FILE *myFile;
-	char str[100];
+	FILE *fadd;
+	char c;
 
-	myFile = fopen("me.txt", "r");
+	fadd = fopen("me.txt", "r");
+	
+	while ((c = fgetc(fadd)) != '\n')
+		printf("%c", c);
 
-
-	fscanf(myFile, "%s", str);
-
-	printf("%s", str);
-
-	fclose(myFile);
+	printf("%c",c);
+	fclose(fadd);
 
 	return (0);
 }
