@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	for (n = 0; n < letters && (c = fgetc(fadd)) != EOF; n++)
 	{
-		byte = write(STDOUT_FILENO, &c, 1);
+		bytes = write(STDOUT_FILENO, &c, 1);
 		
 		if (bytes != 1)
 		{
