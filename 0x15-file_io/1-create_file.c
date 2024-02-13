@@ -3,7 +3,7 @@
 /**
  * create_file - A function
  * @filename: param1
- * @letters: param2
+ * @text_content: param2
  * Return: the number of letters
  */
 int create_file(const char *filename, char *text_content)
@@ -26,7 +26,7 @@ int create_file(const char *filename, char *text_content)
 		for (n = 0; text_content[n] != '\0'; n++)
 		{
 			c = text_content[n];
-			
+			/**/
 			if (write(fadd, &c, 1) != 1)
 			{
 				close(fadd);
@@ -36,7 +36,7 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	close(fadd);
-	
+	/**/
 	if (chmod(filename, S_IRUSR | S_IWUSR) == -1)
 		return (-1);
 
