@@ -5,13 +5,13 @@
  * @str: param
  * Return: void
  */
-void _puts(char *str)
+void _puts(char *s)
 {
 	int i;
 	/**/
-	for (i = 0; str[i]; i++)
+	for (i = 0; s[i]; i++)
 	{
-		_putchar(str[i]);
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }
